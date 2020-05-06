@@ -1,12 +1,14 @@
 import FigureArray from './FigureArray'
 
 const isBigNumber = n => {
-  return typeof n === 'number' &&  n.toString.indexOf('e') > -1
+  return Number(n).toString.indexOf('e') > -1
 }
 
-const numberToString = n => {
-  console.log(n)
+const number2Array = n => {
+  // console.log(n)
 }
+
+const array2Number = a => {}
 
 const doubleStringAdd = (ns1, ns2) => {
 
@@ -14,7 +16,7 @@ const doubleStringAdd = (ns1, ns2) => {
 
 
 const bigNumberAdd = (...numbers) => {
-  return numbers.map(numberToString)
+  return numbers.map(number2Array)
     .reduce(doubleStringAdd, '0')
 }
 
