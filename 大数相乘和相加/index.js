@@ -1,8 +1,4 @@
-import FigureArray from './FigureArray'
-
-const isBigNumber = n => {
-  return Number(n).toString.indexOf('e') > -1
-}
+import BigNumberArray from './BigNumberArray'
 
 const number2Array = n => {
   // console.log(n)
@@ -32,3 +28,5 @@ console.log(test1 * test2)
 
 console.log(bigNumberAdd(test1, test2))
 console.log(bigNumberMultiply(test1, test2))
+
+console.log(new BigNumberArray(1333e33))

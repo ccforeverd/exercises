@@ -3,14 +3,15 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "debug",
+			"script": "compile",
 			"problemMatcher": [],
-			"label": "npm: debug",
+			"label": "npm: compile",
 			"detail": "rollup -c",
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			},
+			"isBackground": false,
 			"options": {
 				"env": {
 					"NODE_ENV": "develop",

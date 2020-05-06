@@ -1135,7 +1135,7 @@ ret@~0.1.10:
 
 rollup@^2.8.0:
   version "2.8.0"
-  resolved "https://registry.npm.taobao.org/rollup/download/rollup-2.8.0.tgz#a1d63fa8331f5c362f025a7fee78b86d4ada5cef"
+  resolved "http://r.cnpmjs.org/rollup/download/rollup-2.8.0.tgz#a1d63fa8331f5c362f025a7fee78b86d4ada5cef"
   integrity sha1-odY/qDMfXDYvAlp/7ni4bUraXO8=
   optionalDependencies:
     fsevents "~2.1.2"
