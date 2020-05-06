@@ -1,3 +1,5 @@
+import FigureArray from './FigureArray'
+
 const isBigNumber = n => {
   return typeof n === 'number' &&  n.toString.indexOf('e') > -1
 }
