@@ -1,0 +1,27 @@
+{
+  "name": "exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccforeverd/exercises.git"
+  },
+  "author": "ccforeverd <zh1045456074@163.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccforeverd/exercises/issues"
+  },
+  "homepage": "https://github.com/ccforeverd/exercises#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "rollup": "^2.8.0",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  }
+}
