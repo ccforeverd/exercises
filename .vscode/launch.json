@@ -41,6 +41,15 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/大数相乘和相加/index.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "双色球排列",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/双色球排列/index.js"
         }
     ]
 }
