@@ -50,6 +50,16 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/双色球排列/index.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "decorator",
+            "program": "${workspaceFolder}/.cache/launch.js",
+            "preLaunchTask": "npm: compile",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
         }
     ]
 }

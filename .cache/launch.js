@@ -1,48 +1,41 @@
 'use strict';
 
-const number2Array = n => {
-  const [number, figure] = Number(n).toString().split('e+');
-  if (figure) {
-    // 大数
-    return [
-      ...[...Array(parseInt(figure) - number.length + 2)].fill(0), // 小数点 + 小数点左侧固定的一位数 = 2
-      ...[...number.replace('.', '')].reverse().map(item => parseInt(item))
-    ]
-  } else {
-    return number.reverse().map(item => parseInt(item))
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
   }
+}
+
+var _class, _dec, _class2;
+
+var test1 = function test1(target) {
+  target.key1 = 1; // 扩展静态属性
+
+  target.prototype.key1 = 2; // 扩展动态属性
 };
 
-const array2Number = a => {
-  return Number(a.reverse().join(''))
+var test1Class = test1(_class = function test1Class() {
+  _classCallCheck(this, test1Class);
+}) || _class;
+
+var test1Obj = new test1Class(); // 结果
+
+console.log('test1Class.key1', test1Class.key1);
+console.log('test1Obj.key1', test1Obj.key1);
+
+var test2 = function test2(name) {
+  return function (target) {
+    target.uname = 'aaa'; // name是class的关键词, 不能使用
+
+    target.prototype.name = name;
+  };
 };
 
-const bigNumberAdd = (...numbers) => {
-  const arrays = numbers.map(number2Array);
-  const maxLength = Math.max(...arrays.map(item => item.length));
-  const result = [];
-  for (let index = 0; index < maxLength; index++) {
-    const number = (result[index] || 0) + arrays.map(item => item[index] || 0).reduce((r, n) => (r + n), 0);
-    result[index] = number % 10;
-    result[index + 1] = Math.floor(number / 10);
-  }
-  return array2Number(result)
-};
+var test2Class = (_dec = test2('testname'), _dec(_class2 = function test2Class() {
+  _classCallCheck(this, test2Class);
+}) || _class2);
+var test2Obj = new test2Class(); // 结果
 
-const bigNumberMultiply = (...numbers) => {
-  return Number(numbers
-    .map(n => Number(n).toString().split('e+'))
-    .reduce((result, [number, figure]) => {
-      return [result[0] * parseFloat(number), result[1] + parseInt(figure || 0)]
-    }, [1, 0])
-    .join('e+'))
-};
-
-const test1 = 1.333e31;
-const test2 = 5.777e30;
-
-console.log(test1 + test2);
-console.log(test1 * test2);
-
-console.log(bigNumberAdd(test1, test2));
-console.log(bigNumberMultiply(test1, test2));
+console.log('test2Class.name', test2Class.name);
+console.log('test2Class.uname', test2Class.uname);
+console.log('test2Obj.name', test2Obj.name);

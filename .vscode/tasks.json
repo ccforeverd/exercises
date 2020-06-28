@@ -15,7 +15,7 @@
 			"options": {
 				"env": {
 					"NODE_ENV": "develop",
-					"TARGET_FOLDER": "${workspaceFolder}/大数相乘和相加"
+					"TARGET_FOLDER": "${workspaceFolder}/decorator"
 				},
 				"shell": {
 					"args": []

@@ -1,5 +1,6 @@
 
 import path from 'path'
+import babel from 'rollup-plugin-babel';
 
 const { TARGET_FOLDER } = process.env
 
@@ -16,6 +17,11 @@ export default {
     // file: `.cache/${FOLDER_NAME}.js`,
     file: `.cache/launch.js`,
     format: 'cjs'
-  }
+  },
+  plugins: [
+    babel({
+      exclude: 'node_modules/**' // 只编译我们的源代码
+    })
+  ]
 }
 
